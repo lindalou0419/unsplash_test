@@ -1,2 +1,11 @@
 <h1>Unsplash Test</h1>
+<%= link_to 'New Image', new_image_path %>
+<%= link_to 'Entries', entries_path %><br><br>
+
 <%= image_tag(@image) %>
+
+<%= form_for @image, html: {class: 'form'} do |f| %>
+  <div class="field">
+    <%= f.submit class: 'btn-default' %>
+  </div>
+<% end %>

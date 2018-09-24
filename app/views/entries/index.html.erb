@@ -1,0 +1,11 @@
+<h1>Entries</h1>
+<%= link_to 'New', new_entry_path %>
+<%= link_to 'Images', images_path %><br><br>
+
+<% @entries.each do |entry| %>
+  <p>
+    <%= entry.content %><br>
+    <%= entry.mood %><br>
+    <%= image_tag(entry.image.image_url) %>
+  </p>
+<% end %>
